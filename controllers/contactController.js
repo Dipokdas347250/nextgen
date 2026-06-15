@@ -1,8 +1,7 @@
 const Contact = require("../models/Contact");
 const sendMail = require("../services/mailService");
 
-const createContact =
-  async (req, res) => {
+const createContact =async (req, res) => {
     try {
       const {
         name,
