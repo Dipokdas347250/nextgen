@@ -1,5 +1,5 @@
 const Contact = require("../models/Contact");
-const sendMail = require("../services/mailService");
+// const sendMail = require("../services/mailService");
 
 const createContact =async (req, res) => {
     try {
@@ -34,13 +34,13 @@ const createContact =async (req, res) => {
           message,
         });
 
-      await sendMail(
-        name,
-        email,
-        phone,
-        subject,
-        message
-      );
+      // await sendMail(
+      //   name,
+      //   email,
+      //   phone,
+      //   subject,
+      //   message
+      // );
 
       res.status(201).json({
         success: true,
