@@ -26,7 +26,7 @@ const sendMail = async (
     );
 
     await transporter.sendMail({
-      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
+      from: `"NextGen Contact" <${process.env.EMAIL_USER}>`,
 
       to:
         process.env.ADMIN_EMAIL ||
