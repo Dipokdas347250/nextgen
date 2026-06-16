@@ -74,7 +74,25 @@ const createContact =async (req, res) => {
   }
 };
 
+const deleteContact = async (req, res) => {
+  try {
+    const { id } = req.params;
+    await Contact.findByIdAndDelete(id);
+
+    res.status(200).json({
+      success: true,
+      message: "Message deleted successfully",
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
 module.exports = {
   createContact,
   getContacts,
+  deleteContact,
 };
